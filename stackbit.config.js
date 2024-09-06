@@ -1,3 +1,4 @@
+// stackbit.config.js
 import { ContentfulContentSource } from "@stackbit/cms-contentful";
 
 export default {
