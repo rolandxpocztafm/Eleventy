@@ -3,11 +3,11 @@ import { ContentfulContentSource } from "@stackbit/cms-contentful";
 export default {
   contentSources: [
     new ContentfulContentSource({
-      spaceId: "your_space_id",
-      environment: "your_environment",
-      previewToken: "your_preview_token",
-      accessToken: "your_management_token"
+      spaceId: process.env.CONTENTFUL_SPACE_ID,
+      environment: process.env.CONTENTFUL_ENVIRONMENT,
+      previewToken: process.env.CONTENTFUL_PREVIEW_TOKEN,
+      accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN
     })
   ]
-  // Other configurations if necessary
+  // ...
 };
