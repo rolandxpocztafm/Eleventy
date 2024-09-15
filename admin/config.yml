@@ -1,3 +1,16 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: main  # Replace with your default branch (e.g., master or main)
+
+media_folder: "static/images/uploads"  # Where uploaded media files will be stored
+public_folder: "/images/uploads"       # Public path to the media folder
+
+collections:
+  - name: "blog"  # Name of the collection
+    label: "Blog Posts"  # Label in the CMS
+    folder: "content/blog"  # Folder where content files are stored
+    create: true  # Allow users to create new documents
+    slug: "{{slug}}"  # URL structure for new posts
+    fields:  # Fields for this collection
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
